@@ -1,0 +1,183 @@
+title {
+  display: flex;
+}
+h1 {
+  text-align: center;
+  font-family: "楷体";
+}
+body {
+  flex-direction: column;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+.container {
+  text-align: center;
+}
+canvas {
+  border: 2px solid #8b4513; /* 深棕色边框 */
+  border-radius: 10px;
+  background-color: burlywood;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#status {
+  font-size: 20px;
+  color: #000000;
+  font-family: "隶书";
+}
+#mode {
+  font-size: 20px;
+  margin: 0px 5px;
+  color: #000000;
+  font-family: "隶书";
+}
+
+#aiButton,
+#undoMove,
+#reset {
+  width: 120px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: "楷体";
+
+  background-color: #8b4513;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#aiButton:hover,
+#undoMove:hover,
+#reset:hover {
+  background-color: #a0522d;
+}
+#playMusic:hover,
+#pauseMusic:hover,
+#change:hover {
+  background-color: #333;
+}
+#playMusic,
+#pauseMusic,
+#change {
+  width: 120px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: "楷体";
+
+  background-color: #150404;
+  color: white;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-bottom: 5%;
+}
+
+/* 胜利弹窗样式 */
+.win-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  text-align: center;
+  max-width: 300px;
+  width: 80%;
+  display: none;
+}
+
+.win-message {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.close-popup {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.close-popup:hover {
+  background-color: #45a049;
+}
+
+.overleay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: none;
+}
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.size-option {
+  padding: 10px 20px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.size-option:hover {
+  background: #f0f0f0;
+}
+
+.popup-content h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.close {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  text-align: center;
+
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}

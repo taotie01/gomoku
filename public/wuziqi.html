@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>五子棋</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <audio src="shuidiaogetou.mp3" id="background_music"></audio>
+
+      <button id="playMusic" onclick="playMusic()">播放音乐</button>
+      <button id="pauseMusic" onclick="pauseMusic()">暂停音乐</button>
+      <button id="change" onclick="changeSize()">棋盘尺寸</button>
+    </div>
+
+    <div class="container">
+      <canvas id="chessboard"></canvas>
+      <div>
+        <div id="status">当前玩家：黑棋</div>
+        <div id="mode">当前模式：双人模式</div>
+      </div>
+
+      <button id="undoMove" onclick="undoMove()">悔棋</button>
+      <button id="reset" onclick="resetGame()">重新开始</button>
+      <button id="aiButton" onclick="toggleAIMode()">单人模式</button>
+    </div>
+
+    <!-- 胜利弹窗 -->
+    <div id="winPopup" class="win-popup">
+      <p id="winMessage" class="win-message"></p>
+      <button id="closePopup" class="close-popup">关闭</button>
+    </div>
+    <div id="overlay" class="overleay"></div>
+
+    <!-- 在HTML中添加弹窗结构，建议放在body底部 -->
+    <div id="sizePopup" class="popup">
+      <div class="popup-content">
+        <h3>选择棋盘尺寸</h3>
+        <div class="size-option" data-size="9">8x8</div>
+        <div class="size-option" data-size="13">12x12</div>
+        <div class="size-option" data-size="19">18x18</div>
+        <button id="closeSizePopup" class="close">取消</button>
+      </div>
+    </div>
+    <div id="sizeOverlay" class="overlay"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

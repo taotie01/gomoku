@@ -1,0 +1,46 @@
+{
+  "name": "gomoku",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "五子棋游戏",
+  "author": "dly",
+  "config": {
+    "electron_mirror": "https://npmmirror.com/mirrors/electron/"
+  },
+  "scripts": {
+    "start": "electron .",
+    "install": "npm install electron",
+    "dist": "electron-builder",
+    "build": "echo 'No build process, using public directory'"
+  },
+  "build": {
+    "appId": "com.example.gomoku",
+    "productName": "五子棋",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*"
+    ],
+    "win": {
+      "icon": "build/icon_256x256.ico"
+    },
+    "mac": {
+      "icon": "build/icon.icns",
+      "category": "public.app-category.games"
+    },
+    "linux": {
+      "icon": "build/icon_512x512.png",
+      "category": "Game"
+    }
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.2.0",
+    "@capacitor/core": "^7.2.0",
+    "electron": "^25.9.8",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.2.0"
+  }
+}
